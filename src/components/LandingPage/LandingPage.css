@@ -430,7 +430,6 @@
     gap: 20px;
     background-color: var(--energyWhite);
     border-radius: 5px;
-    border: dashed yellow;
 }
 
 .pageWrapper .landing .right img{
