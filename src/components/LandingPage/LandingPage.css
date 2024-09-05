@@ -421,7 +421,7 @@
 
     /* styles for Registration voucher starts here */
 .pageWrapper .landing .right{
-    width: 100%;
+    width: 90%;
     height: auto;
     display: flex;
     flex-direction: column;
@@ -430,11 +430,11 @@
     gap: 20px;
     background-color: var(--energyWhite);
     border-radius: 5px;
-    border: dashed red;
+    border: dashed green;
 }
 
 .pageWrapper .landing .right img{
-    width: 90%;
+    width: 100%;
     height: 250px;
 }
 
