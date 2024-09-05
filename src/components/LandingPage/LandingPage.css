@@ -430,11 +430,11 @@
     gap: 20px;
     background-color: var(--energyWhite);
     border-radius: 5px;
-    border: dashed;
+    border: dashed red;
 }
 
 .pageWrapper .landing .right img{
-    width: 100%;
+    width: 90%;
     height: 250px;
 }
 
