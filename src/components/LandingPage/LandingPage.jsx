@@ -104,7 +104,7 @@ const goBack = ()=>{
                 <h1>Grab <span>40% discount</span> on all our courses.
                 </h1>
 
-                <p>Register now with &#8358;10,000 and secure a voucher to enjoy 40% discount on all our courses. Voucher expires at 12am on 1st october 2024.</p>
+                <p>Register now with &#8358;10,000 and secure a voucher to enjoy 40% discount on all our courses. Voucher expires at 12am, 1st october 2024.</p>
 
                 <button className='voucherBtn'>Claim voucher</button>
             </div>
