@@ -3,6 +3,7 @@
     --energyBlue: #10389F;
     --energyWhite: #FFFFFF;
     --btnColor: #2149ae;
+    --voucherRed: #d60b13;
     --boxShadow: 5px 5px 5px rgb(178, 180, 182);
 }
 
@@ -288,6 +289,10 @@
 .pageWrapper .form .field .prices .cost{
     color: var(--energyBlack);
     font-weight: 700;
+}
+
+.pageWrapper .form .field .prices .warning{
+    color: var(--voucherRed);
 }
 
 .pageWrapper .form .field .prices .renderedCost{

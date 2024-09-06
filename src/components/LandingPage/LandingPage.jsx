@@ -6,7 +6,6 @@ import Loading from "../Loading/Loading";
 import { GoArrowLeft } from "react-icons/go";
 import { courses } from "../../assets/Data";
 
-
 function LandingPage() {
   const [loading, setLoading] = useState(false);
   const [screen, setScreen] = useState("landing");
@@ -63,27 +62,27 @@ function LandingPage() {
     setStudent(null);
   };
 
-
-  
   //voucher claim
-  const [preferredCourse, setPreferredCourse] = useState('');
-  console.log('preferredCourse:', preferredCourse)
+  const expectedVoucher = "30456";
+
+  const [preferredCourse, setPreferredCourse] = useState("");
+  console.log("preferredCourse:", preferredCourse);
 
   const [cost, setCost] = useState(0);
-  console.log('cost:', cost)
-  
-  const handleCourses = (e) =>{
+  console.log("cost:", cost);
+
+  const handleCourses = (e) => {
     setPreferredCourse(e.target.value);
 
-    setCost(e.target.cost)
-  }
-
-  
+    setCost(e.target.cost);
+  };
 
   return (
     <div
       className={
-        screen === "landing" || "voucher" ? "pageWrapper wrapper-bg" : "pageWrapper"
+        screen === "landing" || "voucher"
+          ? "pageWrapper wrapper-bg"
+          : "pageWrapper"
       }
     >
       <header className="header">
@@ -121,7 +120,9 @@ function LandingPage() {
               2024.
             </p>
 
-            <button className="voucherBtn" onClick={() => setScreen('voucher')}>Claim voucher</button>
+            <button className="voucherBtn" onClick={() => setScreen("voucher")}>
+              Claim voucher
+            </button>
           </div>
 
           {/* { loading ? <Loading /> : "" } */}
@@ -146,7 +147,7 @@ function LandingPage() {
         </div>
       </div> : ""} */}
 
-      {screen === "voucher" ? 
+      {screen === "voucher" ? (
         <div className="form">
           <span className="tag">Claim Voucher</span>
 
@@ -188,53 +189,84 @@ function LandingPage() {
             <input
               type="number"
               name="phone"
-              placeholder="Enter phone no."
+              placeholder="Enter phone number"
               // onChange={handleCustomerChange}
             />
             {/* {errors.phone && <span>{errors.phone}</span>} */}
           </div>
 
           <div className="field">
-            <label htmlFor="preferredCourse">Phone</label>
-            <select name="preferredCourse" id="preferredCourse" onChange={handleCourses}>
-              <option value="">--Preferred course--</option>
-              {
-                courses.map((course, i) =>
-                  <option value={course.name} key={i}>{course.name}</option>
-                )
-              }
-            </select>
-            
-            <ul>
-               {preferredCourse !=='' ? <p>Overview:</p> : ""}
-              {
-                courses.map((course, i) =>                
-                  course.name === preferredCourse && <li key={i}>{course.overview}</li>                 
-                )
-              }
-            </ul>
-            
-            <div className="prices">
-              
-              {preferredCourse !=='' ? <p className="cost">Cost (40% discount):</p> : ""}
+            <label htmlFor="voucherNumber">Voucher number</label>
+            <input
+              type="number"
+              name="voucherNumber"
+              placeholder="Enter voucher number"
+              // onChange={handleCustomerChange}
+              // value="30456"
+            />
+            {/* {errors.phone && <span>{errors.phone}</span>} */}
+          </div>
 
-              {
-                courses.map((course, i) => course.name === preferredCourse &&
-                  <div className="renderedCost">
-                    <p className="oldPrice">&#8358;{course.price}</p>
-                    <p className="newPrice">&#8358;{ course.price -  (40 / 100) * course.price }</p>
-                  </div>
-                          
-                )
-              }
+          <div className="field">
+            <label htmlFor="preferredCourse">Preferred course</label>
+            <select
+              name="preferredCourse"
+              id="preferredCourse"
+              onChange={handleCourses}
+            >
+              <option value="">--Preferred course--</option>
+              {courses.map((course, i) => (
+                <option value={course.name} key={i}>
+                  {course.name}
+                </option>
+              ))}
+            </select>
+
+            <ul>
+              {preferredCourse !== "" ? <p>Overview:</p> : ""}
+              {courses.map(
+                (course, i) =>
+                  course.name === preferredCourse && (
+                    <li key={i}>{course.overview}</li>
+                  )
+              )}
+            </ul>
+
+            <div className="prices">
+              {preferredCourse !== "" ? (
+                <p className="cost">Cost (40% discount):</p>
+              ) : (
+                ""
+              )}
+
+              {preferredCourse !== "" ? 
+              <p className="warning">
+                Note: Voucher expires at 12am, 1st october 2024. Discount will
+                be withdrawn after this period.
+              </p> : ""}
+
+              {courses.map(
+                (course, i) =>
+                  course.name === preferredCourse && (
+                    <div className="renderedCost">
+                      <p className="oldPrice">&#8358;{course.price}</p>
+                      <p className="newPrice">
+                        &#8358;{course.price - (40 / 100) * course.price}
+                      </p>
+                    </div>
+                  )
+              )}
             </div>
             {/* {errors.phone && <span>{errors.phone}</span>} */}
           </div>
 
-
-          <a href="" className="signUpBtn">Make payment</a>
-          
-        </div> : ""}
+          <a href="" className="signUpBtn">
+            Make payment
+          </a>
+        </div>
+      ) : (
+        ""
+      )}
     </div>
   );
 }
