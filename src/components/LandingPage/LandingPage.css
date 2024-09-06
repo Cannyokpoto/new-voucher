@@ -15,7 +15,7 @@
 
 .wrapper-bg{
     width: 100vw;
-    height: 100vh;
+    height: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -27,7 +27,7 @@
 
 .pageWrapper{
     width: 100vw;
-    height: 100vh;
+    height: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -191,6 +191,132 @@
     height: 430px;
 }
 
+
+
+.pageWrapper .form{
+    width: 50vw;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: var(--energyWhite);
+    margin-top: 50px;
+    gap: 20px;
+    padding: 20px;
+    border-radius: 4px;
+}
+
+.pageWrapper .form .tag{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-size: 30px;
+    font-weight: 700;
+    color: #d60b13;
+}
+
+.pageWrapper .form .field{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: var(--energyWhite);
+}
+
+.pageWrapper .form .field label{
+    font-size: 15px;
+    color: var(--energyBlack);
+}
+
+.pageWrapper .form .field input{
+    width: 100%;
+    height: 40px;
+    background-color: transparent;
+    padding-left: 10px;
+    border-radius: 4px;
+    font-size: 15px;
+    color: var(--energyBlack);
+}
+
+.pageWrapper .form .field select{
+    width: 100%;
+    height: 40px;
+    background-color: transparent;
+    padding-left: 10px;
+    border-radius: 4px;
+    font-size: 15px;
+    color: var(--energyBlack);
+}
+
+.pageWrapper .form .field ul{
+    width: auto;
+    height: auto;
+    margin-top: 15px;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.pageWrapper .form .field ul p{
+    font-size: 15px;
+    color: var(--energyBlack);
+    font-weight: 700;
+    position: relative;
+    left: -20px;
+}
+
+.pageWrapper .form .field ul li{
+    font-size: 15px;
+    color: var(--energyBlack);
+}
+
+.pageWrapper .form .field .prices{
+    width: auto;
+    height: auto;
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    font-size: 15px;
+    gap: 10px;
+}
+
+.pageWrapper .form .field .prices .cost{
+    color: var(--energyBlack);
+    font-weight: 700;
+}
+
+.pageWrapper .form .field .prices .renderedCost{
+    width: auto;
+    height: auto;
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    font-size: 15px;
+    gap: 10px;
+}
+
+.pageWrapper .form .field .prices .oldPrice{
+    text-decoration: line-through;
+    color: gray;
+}
+
+.pageWrapper .form .signUpBtn{
+    width: auto;
+    height: 40px;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-size: 15px;
+    color: var(--energyWhite);
+    background-color: #d60b13;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+}
+
 /* styles for Registration voucher ends here */
 
 .pageWrapper .result{
@@ -263,7 +389,7 @@
 
     .wrapper-bg{
         width: 100vw;
-        height: 100vh;
+        height: auto;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -277,7 +403,7 @@
     
     .pageWrapper{
         width: 100vw;
-        height: 100vh;
+        height: auto;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -435,6 +561,131 @@
 .pageWrapper .landing .right img{
     width: 100%;
     height: 280px;
+}
+
+
+.pageWrapper .form{
+    width: 90vw;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: var(--energyWhite);
+    margin-top: 50px;
+    gap: 20px;
+    padding: 20px;
+    border-radius: 4px;
+}
+
+.pageWrapper .form .tag{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-size: 30px;
+    font-weight: 700;
+    color: #d60b13;
+}
+
+.pageWrapper .form .field{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: var(--energyWhite);
+}
+
+.pageWrapper .form .field label{
+    font-size: 15px;
+    color: var(--energyBlack);
+}
+
+.pageWrapper .form .field input{
+    width: 100%;
+    height: 40px;
+    background-color: transparent;
+    padding-left: 10px;
+    border-radius: 4px;
+    font-size: 15px;
+    color: var(--energyBlack);
+}
+
+.pageWrapper .form .field select{
+    width: 100%;
+    height: 40px;
+    background-color: transparent;
+    padding-left: 10px;
+    border-radius: 4px;
+    font-size: 15px;
+    color: var(--energyBlack);
+}
+
+.pageWrapper .form .field ul{
+    width: auto;
+    height: auto;
+    margin-top: 15px;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.pageWrapper .form .field ul p{
+    font-size: 15px;
+    color: var(--energyBlack);
+    font-weight: 700;
+    position: relative;
+    left: -20px;
+}
+
+.pageWrapper .form .field ul li{
+    font-size: 15px;
+    color: var(--energyBlack);
+}
+
+.pageWrapper .form .field .prices{
+    width: auto;
+    height: auto;
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    font-size: 15px;
+    gap: 10px;
+}
+
+.pageWrapper .form .field .prices .cost{
+    color: var(--energyBlack);
+    font-weight: 700;
+}
+
+.pageWrapper .form .field .prices .renderedCost{
+    width: auto;
+    height: auto;
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    font-size: 15px;
+    gap: 10px;
+}
+
+.pageWrapper .form .field .prices .oldPrice{
+    text-decoration: line-through;
+    color: gray;
+}
+
+.pageWrapper .form .signUpBtn{
+    width: auto;
+    height: 40px;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-size: 15px;
+    color: var(--energyWhite);
+    background-color: #d60b13;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
 }
 
 /* styles for Registration voucher ends here */
