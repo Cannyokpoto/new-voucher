@@ -243,6 +243,11 @@
     color: var(--energyBlack);
 }
 
+.pageWrapper .form .field .voucherError{
+    font-size: 15px;
+    color: var(--voucherRed);
+}
+
 .pageWrapper .form .field select{
     width: 100%;
     height: 40px;
@@ -292,7 +297,7 @@
 }
 
 .pageWrapper .form .field .prices .warning{
-    color: var(--voucherRed);
+    color: var(--energyBlue);
 }
 
 .pageWrapper .form .field .prices .renderedCost{
@@ -318,6 +323,19 @@
     font-size: 15px;
     color: var(--energyWhite);
     background-color: #d60b13;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.pageWrapper .form .signUpBtnDisabled{
+    width: auto;
+    height: 40px;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-size: 15px;
+    color: var(--energyWhite);
+    background-color: #d16f72;
     border: none;
     cursor: pointer;
     text-decoration: none;

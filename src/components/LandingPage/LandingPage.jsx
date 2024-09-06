@@ -1,10 +1,10 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./LandingPage.css";
 import PHOTOS from "../../assets/images";
 import axios from "axios";
 import Loading from "../Loading/Loading";
 import { GoArrowLeft } from "react-icons/go";
-import { courses } from "../../assets/Data";
+// import { courses } from "../../assets/Data";
 
 function LandingPage() {
   const [loading, setLoading] = useState(false);
@@ -32,6 +32,7 @@ function LandingPage() {
   };
   console.warn("certificateNumber:", certificateNumber);
 
+  //view certificate
   async function viewCertificate() {
     const url = `https://server.handiwork.com.ng/api/certificates/number/${certificateNumber}`;
 
@@ -62,20 +63,186 @@ function LandingPage() {
     setStudent(null);
   };
 
+  
+
+  
+
   //voucher claim
+  const coursesUrl = `https://server.handiwork.com.ng/api/subscription/courses`;
+  const [courses, setCourses] = useState();
+  console.warn("courses:", courses);
+
+  useEffect(()=>{
+    const viewCourses = async () =>{
+      try {
+        
+        const response = await axios.get(coursesUrl);
+  
+        setCourses(response.data);
+       
+      } catch (dupError) {
+        console.warn("dupError:", dupError);
+      }
+    }
+
+    viewCourses();
+  },[]);
+
+
+
+  
+
+  
+
+  //validation
   const expectedVoucher = "30456";
 
-  const [preferredCourse, setPreferredCourse] = useState("");
-  console.log("preferredCourse:", preferredCourse);
+  const [firstName, setFirstName] = useState("");
+  console.log("firstName:", firstName);
 
+  const [lastName, setLastName] = useState("");
+  console.log("lastName:", lastName);
+
+  const [email, setEmail] = useState("");
+
+  const [phoneNumber, setPhoneNumber] = useState("");
+  const [preferredCourse, setPreferredCourse] = useState("");
+
+  const [voucherNumber, setVoucherNumber] = useState("");
+  const [errors, setErrors] = useState({});
+
+
+  //to handle courses
   const [cost, setCost] = useState(0);
   console.log("cost:", cost);
+
+  const [redirectUrl, setRedirectUrl] = useState("");
+  console.log("redirectUrl:", redirectUrl);
+
+  const [registeredStudent, setRegisteredStudent] = useState({});
+  console.log("registeredStudent:", registeredStudent);
 
   const handleCourses = (e) => {
     setPreferredCourse(e.target.value);
 
     setCost(e.target.cost);
   };
+
+  useEffect(()=>{
+    if(preferredCourse.toLowerCase().includes('cyber')){
+      setRedirectUrl("https://paystack.com/pay/cybersecurityvoucher");
+    }
+    else if(preferredCourse.toLowerCase().includes('data')){
+      setRedirectUrl("https://paystack.com/pay/dataanalyticsvoucher");
+    }
+    else if(preferredCourse.toLowerCase().includes('cloud')){
+      setRedirectUrl("https://paystack.com/pay/cloudcomputing");
+    }
+    else if(preferredCourse.toLowerCase().includes('fullstack')){
+      setRedirectUrl("https://paystack.com/pay/fullstackweb");
+    }
+    else if(preferredCourse.toLowerCase().includes('mobile')){
+      setRedirectUrl("https://paystack.com/pay/mobile-appdevelopment");
+    }
+    else if(preferredCourse.toLowerCase().includes('ux')){
+      setRedirectUrl("https://paystack.com/pay/ui-uxdesigns");
+    }
+    else if(preferredCourse.toLowerCase().includes('digital')){
+      setRedirectUrl("https://paystack.com/pay/digital-marketingcourse");
+    }
+    else if(preferredCourse.toLowerCase().includes('networkingcourse')){
+      setRedirectUrl("https://paystack.com/pay/networkingcourse");
+    }
+    else if(preferredCourse.toLowerCase().includes('businessanalysis')){
+      setRedirectUrl("https://paystack.com/pay/businessanalysis");
+    }
+    else if(preferredCourse.toLowerCase().includes('graphic')){
+      setRedirectUrl("https://paystack.com/pay/graphic-designcourse");
+    }
+    else if(preferredCourse.toLowerCase().includes('website')){
+      setRedirectUrl("https://paystack.com/pay/nocode-design");
+    }
+    else{
+      setRedirectUrl("#");
+    }
+  }, [preferredCourse])
+
+  
+  //form data to send
+  const formData = {
+    firstName: firstName,
+    lastName: lastName,
+    email: email,
+    phoneNumber: phoneNumber,
+    preferredCourse: preferredCourse,
+    voucherNumber: voucherNumber
+  };
+
+
+  //funtion for form submit
+  const handleSubmit = async () => {
+    const validationErrors = {};
+
+    //To ensure valid inputs
+    if (!firstName.trim()) {
+      validationErrors.firstName = "first name is required";
+    }
+
+    if (!lastName.trim()) {
+      validationErrors.lastName = "last name is required";
+    }
+
+    if (!email.trim()) {
+      validationErrors.email = "email is required";
+    }
+
+    if (!phoneNumber.trim()) {
+      validationErrors.phoneNumber = "phone number is required";
+    }
+
+    if (!preferredCourse.trim()) {
+      validationErrors.preferredCourse = "please select a course";
+    }
+
+    if (!voucherNumber.trim()) {
+      validationErrors.voucherNumber = "please enter your voucher number";
+    } else if (voucherNumber !== expectedVoucher) {
+      validationErrors.voucherNumber = "Invalid voucher number";
+    }
+
+    setErrors(validationErrors);
+
+    console.warn("validationErrors:", validationErrors);
+
+    const noError = Object.keys(validationErrors).length === 0;
+
+    if (noError) {
+      try {
+        const response = await axios.post(
+          "https://server.handiwork.com.ng/api/subscription/register",
+          formData,
+          {
+            headers: {
+              "Content-Type": "application/json",
+            },
+          }
+        );
+
+        if(response.status === 201){
+          setRegisteredStudent(response)
+          alert("Almost done. Proceed to make payment");
+        }else{
+          alert("An unexpected error occured, please refill form.")
+        }
+      } catch (error) {
+        console.log('registration error:', error.response.data.error)
+        alert("An unexpected error occured, please refill form.")
+      }
+    }
+  };
+
+
+  
 
   return (
     <div
@@ -157,9 +324,11 @@ function LandingPage() {
               type="text"
               name="firstName"
               placeholder="Enter first name"
-              // onChange={handleCustomerChange}
+              onChange={(e) => setFirstName(e.target.value)}
             />
-            {/* {errors.phone && <span>{errors.phone}</span>} */}
+            {errors.firstName && (
+              <span className="voucherError">{errors.firstName}</span>
+            )}
           </div>
 
           <div className="field">
@@ -168,9 +337,11 @@ function LandingPage() {
               type="text"
               name="lastName"
               placeholder="Enter last name"
-              // onChange={handleCustomerChange}
+              onChange={(e) => setLastName(e.target.value)}
             />
-            {/* {errors.phone && <span>{errors.phone}</span>} */}
+            {errors.lastName && (
+              <span className="voucherError">{errors.lastName}</span>
+            )}
           </div>
 
           <div className="field">
@@ -179,20 +350,24 @@ function LandingPage() {
               type="email"
               name="email"
               placeholder="Enter your email"
-              // onChange={handleCustomerChange}
+              onChange={(e) => setEmail(e.target.value)}
             />
-            {/* {errors.phone && <span>{errors.phone}</span>} */}
+            {errors.email && (
+              <span className="voucherError">{errors.email}</span>
+            )}
           </div>
 
           <div className="field">
             <label htmlFor="phone">Phone</label>
             <input
               type="number"
-              name="phone"
+              name="phoneNumber"
               placeholder="Enter phone number"
-              // onChange={handleCustomerChange}
+              onChange={(e) => setPhoneNumber(e.target.value)}
             />
-            {/* {errors.phone && <span>{errors.phone}</span>} */}
+            {errors.phoneNumber && (
+              <span className="voucherError">{errors.phoneNumber}</span>
+            )}
           </div>
 
           <div className="field">
@@ -201,10 +376,12 @@ function LandingPage() {
               type="number"
               name="voucherNumber"
               placeholder="Enter voucher number"
-              // onChange={handleCustomerChange}
+              onChange={(e) => setVoucherNumber(e.target.value)}
               // value="30456"
             />
-            {/* {errors.phone && <span>{errors.phone}</span>} */}
+            {errors.voucherNumber && (
+              <span className="voucherError">{errors.voucherNumber}</span>
+            )}
           </div>
 
           <div className="field">
@@ -215,16 +392,19 @@ function LandingPage() {
               onChange={handleCourses}
             >
               <option value="">--Preferred course--</option>
-              {courses.map((course, i) => (
+              {courses && courses.map((course, i) => (
                 <option value={course.name} key={i}>
                   {course.name}
                 </option>
               ))}
             </select>
+            {errors.preferredCourse && (
+              <span className="voucherError">{errors.preferredCourse}</span>
+            )}
 
             <ul>
               {preferredCourse !== "" ? <p>Overview:</p> : ""}
-              {courses.map(
+              {courses && courses.map(
                 (course, i) =>
                   course.name === preferredCourse && (
                     <li key={i}>{course.overview}</li>
@@ -239,34 +419,68 @@ function LandingPage() {
                 ""
               )}
 
-              {preferredCourse !== "" ? 
-              <p className="warning">
-                Note: Voucher expires at 12am, 1st october 2024. Discount will
-                be withdrawn after this period.
-              </p> : ""}
+              {preferredCourse !== "" ? (
+                <p className="warning">
+                  Note: Voucher expires at 12am, 1st october 2024. Discount will
+                  be withdrawn after this period.
+                </p>
+              ) : (
+                ""
+              )}
 
-              {courses.map(
+              {courses && courses.map(
                 (course, i) =>
                   course.name === preferredCourse && (
                     <div className="renderedCost">
                       <p className="oldPrice">&#8358;{course.price}</p>
                       <p className="newPrice">
-                        &#8358;{course.price - (40 / 100) * course.price}
+                        &#8358;{course.price - (40 / 100) * course.price}.00
                       </p>
                     </div>
                   )
               )}
             </div>
-            {/* {errors.phone && <span>{errors.phone}</span>} */}
           </div>
+          
 
-          <a href="" className="signUpBtn">
-            Make payment
-          </a>
+            {/* Invalid inputs */}
+            
+          {(firstName !== "" &&
+            lastName !== "" &&
+            email !== "" &&
+            phoneNumber !== "" &&
+            voucherNumber !== "" &&
+            preferredCourse !== "" && voucherNumber === expectedVoucher) ||
+          !errors ? (
+            ""
+          ) : (
+            <button className="signUpBtnDisabled" onClick={handleSubmit}>
+              Make payment
+            </button>
+          )}
+
+          {/* Good to go! */}
+          
+          {(firstName !== "" &&
+            lastName !== "" &&
+            email !== "" &&
+            phoneNumber !== "" &&
+            voucherNumber !== "" &&
+            preferredCourse !== "" && voucherNumber === expectedVoucher) ||
+            !errors ? (
+              <a href={`${redirectUrl}`} className="signUpBtn" onClick={handleSubmit}>
+                Make payment
+              </a>
+            ) : (
+            ""
+          )}
+
+          
         </div>
       ) : (
         ""
       )}
+      {/* <button className="signUpBtn" onClick={handleSubmit}>try payment</button> */}
     </div>
   );
 }
