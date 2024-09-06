@@ -206,7 +206,7 @@ function LandingPage() {
             </select>
             
             <ul>
-              <p>Overview:</p>
+               {preferredCourse !=='' ? <p>Overview:</p> : ""}
               {
                 courses.map((course, i) =>                
                   course.name === preferredCourse && <li key={i}>{course.overview}</li>                 
@@ -215,9 +215,8 @@ function LandingPage() {
             </ul>
             
             <div className="prices">
-              <p className="cost">Cost (40% discount):</p>
-              {/* <p className="oldPrice">&#8358;100,000</p> */}
-              {/* <p className="newPrice">&#8358;60,000</p> */}
+              
+              {preferredCourse !=='' ? <p className="cost">Cost (40% discount):</p> : ""}
 
               {
                 courses.map((course, i) => course.name === preferredCourse &&
