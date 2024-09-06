@@ -23,6 +23,7 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-color: var(--energyWhite);
+    padding-bottom: 50px;
 }
 
 .pageWrapper{
