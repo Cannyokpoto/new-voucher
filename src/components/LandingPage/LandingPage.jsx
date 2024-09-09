@@ -283,7 +283,7 @@ function LandingPage() {
 
             <p>
               Register now with &#8358;10,000 and secure a voucher to enjoy 40%
-              discount on all our courses. Voucher expires at 12am, 1st october
+              discount on all our courses. Voucher expires at midnight, 16th september
               2024.
             </p>
 
@@ -421,7 +421,7 @@ function LandingPage() {
 
               {preferredCourse !== "" ? (
                 <p className="warning">
-                  Note: Voucher expires at 12am, 1st october 2024. Discount will
+                  Note: Voucher expires at midnight, 16th september 2024. Discount will
                   be withdrawn after this period.
                 </p>
               ) : (
