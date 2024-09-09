@@ -154,7 +154,7 @@ function LandingPage() {
     else if(preferredCourse.toLowerCase().includes('digital')){
       setRedirectUrl("https://paystack.com/pay/digital-marketingcourse");
     }
-    else if(preferredCourse.toLowerCase().includes('networkingcourse')){
+    else if(preferredCourse.toLowerCase().includes('networking')){
       setRedirectUrl("https://paystack.com/pay/networkingcourse");
     }
     else if(preferredCourse.toLowerCase().includes('business analysis')){
@@ -172,8 +172,17 @@ function LandingPage() {
     else if(preferredCourse.toLowerCase().includes('animation')){
       setRedirectUrl("https://paystack.com/pay/animationcourse");
     }
-    else if(preferredCourse.toLowerCase().includes('networking')){
-      setRedirectUrl("https://paystack.com/pay/networkingcourse");
+    else if(preferredCourse.toLowerCase().includes('machine')){
+      setRedirectUrl("https://paystack.com/pay/ai-machine-learning");
+    }
+    else if(preferredCourse.toLowerCase().includes('content')){
+      setRedirectUrl("https://paystack.com/pay/video-editing-content");
+    }
+    else if(preferredCourse.toLowerCase().includes('video')){
+      setRedirectUrl("https://paystack.com/pay/video-editing-content");
+    }
+    else if(preferredCourse.toLowerCase().includes('python')){
+      setRedirectUrl("https://paystack.com/pay/pythonprog");
     }
     else{
       setRedirectUrl("#");
