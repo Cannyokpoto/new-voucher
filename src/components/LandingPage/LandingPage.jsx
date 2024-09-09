@@ -72,6 +72,10 @@ function LandingPage() {
   const [courses, setCourses] = useState();
   console.warn("courses:", courses);
 
+  //to sort the courses in alphabetical order
+  const sortedCourses = courses && courses.sort((a, b) => a.name.localeCompare(b.name))
+  console.warn("sortedCourses:", sortedCourses);
+
   useEffect(()=>{
     const viewCourses = async () =>{
       try {
@@ -138,7 +142,7 @@ function LandingPage() {
     else if(preferredCourse.toLowerCase().includes('cloud')){
       setRedirectUrl("https://paystack.com/pay/cloudcomputing");
     }
-    else if(preferredCourse.toLowerCase().includes('fullstack')){
+    else if(preferredCourse.toLowerCase().includes('full stack')){
       setRedirectUrl("https://paystack.com/pay/fullstackweb");
     }
     else if(preferredCourse.toLowerCase().includes('mobile')){
@@ -153,7 +157,7 @@ function LandingPage() {
     else if(preferredCourse.toLowerCase().includes('networkingcourse')){
       setRedirectUrl("https://paystack.com/pay/networkingcourse");
     }
-    else if(preferredCourse.toLowerCase().includes('businessanalysis')){
+    else if(preferredCourse.toLowerCase().includes('business analysis')){
       setRedirectUrl("https://paystack.com/pay/businessanalysis");
     }
     else if(preferredCourse.toLowerCase().includes('graphic')){
@@ -161,6 +165,15 @@ function LandingPage() {
     }
     else if(preferredCourse.toLowerCase().includes('website')){
       setRedirectUrl("https://paystack.com/pay/nocode-design");
+    }
+    else if(preferredCourse.toLowerCase().includes('devop')){
+      setRedirectUrl("https://paystack.com/pay/dev-op");
+    }
+    else if(preferredCourse.toLowerCase().includes('animation')){
+      setRedirectUrl("https://paystack.com/pay/animationcourse");
+    }
+    else if(preferredCourse.toLowerCase().includes('networking')){
+      setRedirectUrl("https://paystack.com/pay/networkingcourse");
     }
     else{
       setRedirectUrl("#");
@@ -392,7 +405,7 @@ function LandingPage() {
               onChange={handleCourses}
             >
               <option value="">--Preferred course--</option>
-              {courses && courses.map((course, i) => (
+              {sortedCourses && sortedCourses.map((course, i) => (
                 <option value={course.name} key={i}>
                   {course.name}
                 </option>
