@@ -8,7 +8,6 @@
 }
 
 .countDown-wrapper{
-    border: dashed;
     width: auto;
     height: auto;
     display: flex;
@@ -16,7 +15,6 @@
 }
 
 .countDown-wrapper .countDown{
-    border: dashed;
     width: auto;
     height: auto;
     display: flex;

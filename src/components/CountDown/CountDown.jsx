@@ -65,7 +65,7 @@ const Countdown = () => {
           </div>
         </div>
       ) : (
-        <p>The promo has ended!</p>
+        <p>Voucher no longer valid!</p>
       )}
     </div>
   );
