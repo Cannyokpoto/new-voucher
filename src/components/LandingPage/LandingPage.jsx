@@ -4,7 +4,9 @@ import PHOTOS from "../../assets/images";
 import axios from "axios";
 import Loading from "../Loading/Loading";
 import { GoArrowLeft } from "react-icons/go";
+import Countdown from "../CountDown/CountDown";
 // import { courses } from "../../assets/Data";
+
 
 function LandingPage() {
   const [loading, setLoading] = useState(false);
@@ -167,7 +169,7 @@ function LandingPage() {
       setRedirectUrl("https://paystack.com/pay/nocode-design");
     }
     else if(preferredCourse.toLowerCase().includes('devop')){
-      setRedirectUrl("https://paystack.com/pay/dev-op");
+      setRedirectUrl("https://paystack.com/pay/dev-ops");
     }
     else if(preferredCourse.toLowerCase().includes('animation')){
       setRedirectUrl("https://paystack.com/pay/animationcourse");
@@ -299,6 +301,7 @@ function LandingPage() {
           </div>
 
           <div className="left">
+            <Countdown />
             <h1>
               Grab <span>40% discount</span> on all our courses.
             </h1>
