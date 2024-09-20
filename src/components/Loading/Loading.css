@@ -19,7 +19,7 @@ body.active-loading{
 }
 
 .loading{
-    height: 100vh;
+    height: 100%;
     width: 100vw;
     z-index: 50;
     position: absolute;
@@ -65,7 +65,7 @@ body.active-loading{
 @media (max-width: 500px){
 
     .loading{
-        height: 100vh;
+        height: 100%;
         width: 100vw;
         z-index: 50;
         position: absolute;

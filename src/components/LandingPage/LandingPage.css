@@ -4,6 +4,7 @@
     --energyWhite: #FFFFFF;
     --btnColor: #2149ae;
     --voucherRed: #d60b13;
+    --challengeBlue: #017eef;
     --boxShadow: 5px 5px 5px rgb(178, 180, 182);
 }
 
@@ -26,6 +27,7 @@
     background-color: var(--energyWhite);
     padding-bottom: 50px;
 }
+
 
 .pageWrapper{
     width: 100vw;
@@ -108,12 +110,41 @@
     color: var(--energyWhite);
     font-size: 15px;
     width: auto;
-    background-color: #d60b13;
+    background-color: var(--challengeBlue);
     height: 40px;
     padding: 10px;
     border-radius: 4px;
     border: none;
     cursor: pointer;
+    text-decoration: none;
+}
+
+.pageWrapper .landing .left .winner-verification{
+    width: 70%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.pageWrapper .landing .left .winner-verification input{
+    width: 100%;
+    height: 40px;
+    background-color: var(--energyWhite);
+    border-radius: 4px;
+    padding-left: 10px;
+    font-size: 15px;
+    color: var(--energyBlack);
+}
+
+.pageWrapper .landing .left .winner-verification p{
+    width: 100%;
+    height: auto;
+    background-color: var(--energyWhite);
+    font-size: 15px;
+    color: var(--voucherRed);
+    padding: 10px;
 }
 
 /* styles for Registration voucher starts here */
@@ -407,6 +438,60 @@
     font-weight: 700;
 }
 
+.guidelines{
+    width: 70vw;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: flex-start;
+    margin-top: 30px;
+    padding-bottom: 50px;
+}
+
+.guidelines .task{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+}
+
+.guidelines .task h2{
+    color: var(--energyBlack);
+}
+
+.guidelines .task p{
+    color: var(--energyBlack);
+    font-size: 15px;
+}
+
+.guidelines ul, .guidelines ol{
+    width: 95%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+    font-size: 15px;
+    padding-left: 15px;
+}
+
+
+.guidelines .taskBtn{
+    color: var(--energyWhite);
+    font-size: 15px;
+    width: auto;
+    background-color: var(--energyBlack);
+    height: 40px;
+    padding: 10px 20px;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+}
+
 
 @media (max-width: 500px){
 
@@ -469,6 +554,18 @@
         margin-top: 20px;
         gap: 20px;
     }
+
+    .pageWrapper .nextLanding{
+        width: 90vw;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background: transparent;
+        margin-top: 20px;
+        gap: 20px;
+    }
     
     .pageWrapper .landing .left{
         width: 100%;
@@ -507,12 +604,41 @@
     color: var(--energyWhite);
     font-size: 15px;
     width: auto;
-    background-color: #d60b13;
+    background-color: var(--challengeBlue);
     height: 40px;
     padding: 10px;
     border-radius: 4px;
     border: none;
     cursor: pointer;
+}
+
+
+.pageWrapper .landing .left .winner-verification{
+    width: 90vw;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.pageWrapper .landing .left .winner-verification input{
+    width: 100%;
+    height: 40px;
+    background-color: var(--energyWhite);
+    border-radius: 4px;
+    padding-left: 10px;
+    font-size: 15px;
+    color: var(--energyBlack);
+}
+
+.pageWrapper .landing .left .winner-verification p{
+    width: 100%;
+    height: auto;
+    background-color: var(--energyWhite);
+    font-size: 15px;
+    color: var(--voucherRed);
+    padding: 10px;
 }
 
 /* styles for Registration voucher starts here */
@@ -775,5 +901,61 @@
         font-size: 15px;
         color: var(--energyBlack);
         font-weight: 700;
+    }
+
+
+
+
+    .guidelines{
+        width: 90vw;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        align-items: flex-start;
+        margin-top: 30px;
+    }
+    
+    .guidelines .task{
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        align-items: flex-start;
+    }
+    
+    .guidelines .task h2{
+        color: var(--energyBlack);
+    }
+    
+    .guidelines .task p{
+        color: var(--energyBlack);
+        font-size: 15px;
+    }
+    
+    .guidelines ul, .guidelines ol{
+        width: 95%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        align-items: flex-start;
+        font-size: 15px;
+        padding-left: 15px;
+    }
+    
+    
+    .guidelines .taskBtn{
+        color: var(--energyWhite);
+        font-size: 15px;
+        width: auto;
+        background-color: var(--energyBlack);
+        height: 40px;
+        padding: 10px 20px;
+        border-radius: 4px;
+        border: none;
+        cursor: pointer;
+        text-decoration: none;
     }
 }

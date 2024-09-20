@@ -1,15 +1,27 @@
-import { useState } from 'react'
+import { useState } from 'react';
+import { BrowserRouter as Router, Routes, Route, BrowserRouter } from "react-router-dom";
 import './App.css'
-import LandingPage from './components/LandingPage/LandingPage'
+import { FirstLandingPage, SecondLandingPage } from './components/LandingPage/LandingPage'
+
 
 
 function App() {
 
   return (
    <div className="app">
-      <LandingPage />
+      
+      <Router>
+            
+            <Routes>
+                <Route path="/" element={<FirstLandingPage />} />                
+                
+                <Route path="/course-registration" element={<SecondLandingPage />} />      
+                
+            </Routes>
+            
+        </Router>
    </div>
   )
 }
 
-export default App
+export default App;
