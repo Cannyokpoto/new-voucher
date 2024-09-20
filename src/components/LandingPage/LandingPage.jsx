@@ -247,6 +247,7 @@ function FirstLandingPage() {
         if (response.status === 201) {
           setParticipant(response.data.promotionDetails);
           alert("Registration for #MyTechDreamWithPageInnovations completed. Good luck!");
+          setScreen('landing')
         } else {
           alert("An unexpected error occured, please refill form.");
         }
