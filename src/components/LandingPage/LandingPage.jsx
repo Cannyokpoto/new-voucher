@@ -62,7 +62,7 @@ function FirstLandingPage() {
   }
 
   const goBack = () => {
-    setScreen("landing");
+    setScreen("guidelines");
     setStudent(null);
   };
 
@@ -362,6 +362,7 @@ function FirstLandingPage() {
 
       {screen === "taskForm" ? (
         <div className="form">
+          <GoArrowLeft className="anotherCert" onClick={goBack} />
           <span className="tag">Start task</span>
 
           <div className="field">

@@ -58,8 +58,8 @@
     position: absolute;
     font-size: 30px;
     color: var(--energyBlack);
-    left: 5vw;
-    top: 80px;
+    left: 20px;
+    top: -20px;
     cursor: pointer;
 }
 
@@ -237,6 +237,7 @@
     gap: 20px;
     padding: 20px;
     border-radius: 4px;
+    position: relative;
 }
 
 .pageWrapper .form .tag{
@@ -538,8 +539,8 @@
         position: absolute;
         font-size: 27px;
         color: var(--energyBlack);
-        left: 5vw;
-        top: 50px;
+        left: 20px;
+        top: -30px;
         cursor: pointer;
     }
     
