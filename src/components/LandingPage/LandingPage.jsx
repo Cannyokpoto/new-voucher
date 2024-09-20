@@ -436,7 +436,7 @@ function FirstLandingPage() {
             <input
               type="text"
               name="instagramHandle"
-              placeholder="Enter URL"
+              placeholder="E.g https://instagram.com/..."
               onChange={(e) => setInstagramUrl(e.target.value)}
               // value="30456"
             />
