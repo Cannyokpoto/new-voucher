@@ -252,13 +252,7 @@ function Twenty() {
           <GoArrowLeft className="anotherCert" onClick={goBack} />
         ) : (
           ""
-        )}
-  
-        
-         
-       
-  
-        
+        )}      
   
         {screen === "winner" ? (
           <div className="border form">

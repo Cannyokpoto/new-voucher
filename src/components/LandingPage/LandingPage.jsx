@@ -305,7 +305,7 @@ function FirstLandingPage() {
 
             <p>
               The window to our 40% Discount Offer for all our courses has
-              closed, to enjoy this offer kindly engage with the task below and
+              closed. However, to still enjoy this offer, kindly engage with the task below and
               stand a chance of winning the 40% Discount offer.
             </p>
 
