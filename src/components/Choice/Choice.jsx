@@ -70,7 +70,7 @@ function Independence() {
             >
             <GoArrowLeft className="anotherCert" />
             </Link>
-            <img src={PHOTOS.independence} alt=""  className="h-430px w-90 small:w-100"/>
+            <img src={PHOTOS.independence} alt=""  className="large:h-430px w-90 small:w-100"/>
         </div>
   
         <div className="flex flex-col w-40 h-auto gap-2 pt-3 small:w-100 small:items-center small:pb-3">
