@@ -11,3 +11,35 @@
     background-size: cover;
     background-repeat: no-repeat;
 }
+
+
+/* choice styles */
+@media (max-width: 500px){
+    .choice{
+        border: dashed;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 100vh;
+    }
+
+    .choice .vid{
+        border: dashed;
+        width: 100%;
+        height: auto;
+    }
+
+    .choice .vid iframe{
+        border: dashed;
+        width: 100%;
+        height: 200px;
+    }
+
+    .choice .txt{
+        border: dashed;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+    }
+}

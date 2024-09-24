@@ -9,7 +9,7 @@ import { GoArrowLeft } from "react-icons/go";
 function Choice() {
   return (
     <div className="lg:flex-row lg:border lg:pt-5 lg:gap-3 lg:justify-around lg:items-start lg:flex lg:h-100vh lg:w-100vw choice small:flex small:flex-col small:w-90vw small:items-center small:h-auto small:gap-3">
-      <div className="h-auto lg:w-40 lg:rounded-10 small:w-100">
+      <div className="h-auto lg:w-40 lg:rounded-10 small:w-100 vid">
         <iframe
           //   width="100%"
           //   height="315"
@@ -24,7 +24,7 @@ function Choice() {
         ></iframe>
       </div>
 
-      <div className="lg:gap-2 lg:h-auto lg:flex-col lg:flex lg:w-50 small:w-100 small:px-1 small:h-auto small:gap-3 small:flex small:flex-col small:pb-3">
+      <div className="lg:gap-2 lg:h-auto lg:flex-col lg:flex lg:w-50 small:w-100 small:px-1 small:h-auto small:gap-3 small:flex small:flex-col small:pb-3 txt">
         <h1 className="lg:text-30px text-vogueWhite small:text-15px">
           Unlock <span className="font-bold">40% OFF</span> by Completing a Task
           or Grab <span className="font-bold">20% OFF</span> Instantly
