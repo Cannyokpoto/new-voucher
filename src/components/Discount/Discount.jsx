@@ -4,7 +4,7 @@ import PHOTOS from "../../assets/images";
 
 function Discount() {
   return (
-    <div className="flex flex-col items-center gap-3 mt-2 w-60vw">
+    <div className="flex flex-col items-center h-auto gap-3 mt-2 w-60vw small:w-90vw">
       <img src={PHOTOS.discount_avatar} alt="" className="w-350px h-300px" />
       <h4 className="font-bold">Preferred Learning Mode</h4>
 
