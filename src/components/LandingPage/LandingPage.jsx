@@ -289,7 +289,7 @@ function FirstLandingPage() {
                 
                 <Link
                   to="/choice"
-                  className="absolute text-white left-3 text-30px bottom-40"
+                  className="absolute text-white left-3 text-30px bottom-40 backLink"
                   >
                   <GoArrowLeft />
                 </Link>

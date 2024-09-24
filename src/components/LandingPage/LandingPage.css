@@ -496,6 +496,10 @@
 
 @media (max-width: 500px){
 
+    .backLink{
+        top: -20px;
+    }
+
     .wrapper-bg{
         width: 100vw;
         height: auto;
@@ -655,6 +659,7 @@
         background-color: var(--energyWhite);
         border-radius: 5px;
         padding: 20px;
+        margin-top: 50px;
     }
     
     .pageWrapper .landing .right p{
