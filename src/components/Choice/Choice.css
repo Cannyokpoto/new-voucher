@@ -21,6 +21,7 @@
         flex-direction: column;
         align-items: center;
         height: 100vh;
+        gap: 20px;
     }
 
     .choice .vid{
@@ -41,5 +42,7 @@
         flex-direction: column;
         align-items: center;
         height: auto;
+        padding: 0 10px;
+        gap: 20px;
     }
 }
