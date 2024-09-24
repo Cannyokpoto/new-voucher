@@ -8,12 +8,12 @@ import { GoArrowLeft } from "react-icons/go";
 
 function Choice() {
   return (
-    <div className="lg:flex-row lg:border lg:pt-5 lg:gap-3 lg:justify-around lg:items-start lg:flex lg:h-100vh lg:w-100vw choice small:flex small:flex-col small:w-90vw small:items-center small:h-auto small:gap-3">
-      <div className="h-auto lg:w-40 lg:rounded-10 small:w-100 vid">
+    <div className="flex flex-col items-center h-auto gap-3 lg:flex-row lg:border lg:pt-5 lg:gap-3 lg:justify-around lg:items-start lg:flex lg:h-100vh lg:w-100vw choice w-90vw">
+      <div className="h-auto lg:w-40 lg:rounded-10 w-100 vid">
         <iframe
           //   width="100%"
           //   height="315"
-          className="lg:h-315px lg:w-100 rounded-20 small:h-200px small:w-100"
+          className="lg:h-315px lg:w-100 rounded-20 h-200px w-100"
         //   src="https://www.youtube.com/embed/lFC9stI0J6s?si=0axOF9Uzi1fDxZrP"
         src="https://www.youtube.com/embed/3MGJtRxPmfc?si=DmeDD9AXZ2VIHNkI"
           title="YouTube video player"
@@ -24,8 +24,8 @@ function Choice() {
         ></iframe>
       </div>
 
-      <div className="lg:gap-2 lg:h-auto lg:flex-col lg:flex lg:w-50 small:w-100 small:px-1 small:h-auto small:gap-3 small:flex small:flex-col small:pb-3 txt">
-        <h1 className="lg:text-30px text-vogueWhite small:text-15px">
+      <div className="flex flex-col h-auto gap-3 px-1 pb-3 lg:gap-2 lg:h-auto lg:flex-col lg:flex lg:w-50 w-100 txt">
+        <h1 className="lg:text-30px text-vogueWhite text-15px">
           Unlock <span className="font-bold">40% OFF</span> by Completing a Task
           or Grab <span className="font-bold">20% OFF</span> Instantly
         </h1>
@@ -62,24 +62,24 @@ function Choice() {
 
 function Independence() {
     return (
-      <div className="large:border large:pt-3 large:justify-center large:items-start large:flex large:h-100vh large:w-100vw independence small:flex small:flex-col small:w-90vw small:h-auto small:items-center">
-        <div className="flex flex-col justify-center h-auto gap-1 w-30 rounded-10 small:w-100 indep-image">
+      <div className="flex items-center justify-center pt-3 border h-100vh independence w-90vw">
+        <div className="flex flex-col justify-center h-auto gap-1 w-30 rounded-10 indep-image">
             <Link
             to="/choice"
             className="text-black text-30px"
             >
             <GoArrowLeft className="anotherCert" />
             </Link>
-            <img src={PHOTOS.independence} alt=""  className="large:h-430px w-90 small:w-100"/>
+            <img src={PHOTOS.independence} alt=""  className=" h-430px w-90 w-100"/>
         </div>
   
-        <div className="flex flex-col h-auto gap-2 pt-3 large:w-40 small:w-100 small:items-center small:pb-3 indep-text">
+        <div className="flex flex-col items-start w-40 h-auto gap-2 pt-3 pb-3 indep-text">
           <h1 className="text-black text-30px">
             Grab <span className="font-bold">20% OFF</span>
             Instantly
           </h1>
   
-          <p className="text-black text-15px small:text-center">
+          <p className="text-center text-black text-15px">
           Would you like to learn any of our in demand courses? We’re offering you an instant 20% discount without any tasks or extra steps. Just sign up, save, and start learning right away!
           </p>
   
@@ -90,7 +90,7 @@ function Independence() {
             Claim 20% discount
           </Link>
   
-          <div className="flex flex-col w-auto h-auto gap-1 small:items-center">
+          <div className="flex flex-col items-center w-auto h-auto gap-1">
             <p className="text-black text-15px">
             For more Information
             </p>
