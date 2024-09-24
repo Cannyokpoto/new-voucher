@@ -1,0 +1,13 @@
+.choice{
+    background: url(./../../assets/images/choice_bg.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.independence{
+    background: url(./../../assets/images/independence_bg.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}

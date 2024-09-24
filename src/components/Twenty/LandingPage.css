@@ -1,0 +1,962 @@
+:root{
+    --energyBlack: #090909;
+    --energyBlue: #10389F;
+    --energyWhite: #FFFFFF;
+    --btnColor: #2149ae;
+    --voucherRed: #d60b13;
+    --challengeBlue: #017eef;
+    --boxShadow: 5px 5px 5px rgb(178, 180, 182);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: all 0.5s linear;
+}
+
+.wrapper-bg{
+    width: 100vw;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: url(./../../assets/images/bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: var(--energyWhite);
+    padding-bottom: 50px;
+}
+
+
+.pageWrapper{
+    width: 100vw;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--energyWhite);
+    position: relative;
+}
+
+.pageWrapper .header{
+    width: 100vw;
+    height: 70px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--energyWhite);
+}
+
+.pageWrapper .header img{
+    width: 140px;
+    height: 50px;
+}
+
+.pageWrapper .anotherCert{
+    position: absolute;
+    font-size: 30px;
+    color: var(--energyBlack);
+    left: 0px;
+    top: -40px;
+    cursor: pointer;
+}
+
+.pageWrapper .landing{
+    width: 80vw;
+    height: 65vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    margin-top: 80px;
+    gap: 50px;
+}
+
+.pageWrapper .landing .left{
+    width: 40%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 30px;
+}
+
+.pageWrapper .landing .left h1{
+    color: var(--energyWhite);
+    font-weight: 400;
+    font-size: 30px;
+    width: 95%;
+}
+
+.pageWrapper .landing .left h1 span{
+    color: var(--energyWhite);
+    font-weight: 900;
+    font-size: 30px;
+}
+
+.pageWrapper .landing .left p{
+    width: 80%;
+    color: var(--energyWhite);
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+/* styles for Registration voucher starts here */
+.pageWrapper .landing .left .voucherBtn{
+    color: var(--energyWhite);
+    font-size: 15px;
+    width: auto;
+    background-color: var(--challengeBlue);
+    height: 40px;
+    padding: 10px;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.pageWrapper .landing .left .winner-verification{
+    width: 70%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.pageWrapper .landing .left .winner-verification input{
+    width: 100%;
+    height: 40px;
+    background-color: var(--energyWhite);
+    border-radius: 4px;
+    padding-left: 10px;
+    font-size: 15px;
+    color: var(--energyBlack);
+}
+
+.pageWrapper .landing .left .winner-verification p{
+    width: 100%;
+    height: auto;
+    background-color: var(--energyWhite);
+    font-size: 15px;
+    color: var(--voucherRed);
+    padding: 10px;
+}
+
+/* styles for Registration voucher starts here */
+
+
+
+.pageWrapper .landing .right{
+    width: 40%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    background-color: var(--energyWhite);
+    border-radius: 5px;
+}
+
+.pageWrapper .landing .right p{
+    width: 80%;
+    color: var(--energyBlack);
+    text-align: center;
+    font-size: 15px;
+}
+
+.pageWrapper .landing .right .certError{
+    color: red;
+    font-size: 15px;
+}
+
+.pageWrapper .landing .right input{
+    width: 90%;
+    height: 40px;
+    border-radius: 4px;
+    padding-left: 10px;
+    color: var(--energyWhite);
+    background-color: var(--energyBlack);
+    font-size: 15px;
+}
+
+.pageWrapper .landing .right button{
+    width: 90%;
+    height: 40px;
+    border-radius: 4px;
+    padding-left: 10px;
+    color: var(--energyWhite);
+    background-color: var(--btnColor);
+    font-size: 15px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    cursor: pointer;
+}
+
+.pageWrapper .landing .right button:hover{
+    background-color: rgb(32, 32, 93);
+}
+
+
+/* styles for Registration voucher starts here */
+.pageWrapper .landing .right{
+    width: 35%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    background-color: var(--energyWhite);
+    border-radius: 5px;
+}
+
+.pageWrapper .landing .right img{
+    width: 100%;
+    height: 430px;
+}
+
+
+
+.pageWrapper .form{
+    width: 50vw;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: var(--energyWhite);
+    margin-top: 50px;
+    gap: 20px;
+    padding: 20px;
+    border-radius: 4px;
+    position: relative;
+}
+
+.pageWrapper .form .tag{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-size: 30px;
+    font-weight: 700;
+    color: #d60b13;
+}
+
+.pageWrapper .form .field{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: var(--energyWhite);
+}
+
+.pageWrapper .form .field label{
+    font-size: 15px;
+    color: var(--energyBlack);
+}
+
+.pageWrapper .form .field input{
+    width: 100%;
+    height: 40px;
+    background-color: transparent;
+    padding-left: 10px;
+    border-radius: 4px;
+    font-size: 15px;
+    color: var(--energyBlack);
+}
+
+.pageWrapper .form .field .voucherError{
+    font-size: 15px;
+    color: var(--voucherRed);
+}
+
+.pageWrapper .form .field select{
+    width: 100%;
+    height: 40px;
+    background-color: transparent;
+    padding-left: 10px;
+    border-radius: 4px;
+    font-size: 15px;
+    color: var(--energyBlack);
+}
+
+.pageWrapper .form .field ul{
+    width: auto;
+    height: auto;
+    margin-top: 15px;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.pageWrapper .form .field ul p{
+    font-size: 15px;
+    color: var(--energyBlack);
+    font-weight: 700;
+    position: relative;
+    left: -20px;
+}
+
+.pageWrapper .form .field ul li{
+    font-size: 15px;
+    color: var(--energyBlack);
+}
+
+.pageWrapper .form .field .prices{
+    width: auto;
+    height: auto;
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    font-size: 15px;
+    gap: 10px;
+}
+
+.pageWrapper .form .field .prices .cost{
+    color: var(--energyBlack);
+    font-weight: 700;
+}
+
+.pageWrapper .form .field .prices .warning{
+    color: var(--energyBlue);
+}
+
+.pageWrapper .form .field .prices .renderedCost{
+    width: auto;
+    height: auto;
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    font-size: 15px;
+    gap: 10px;
+}
+
+.pageWrapper .form .field .prices .oldPrice{
+    text-decoration: line-through;
+    color: gray;
+}
+
+.pageWrapper .form .signUpBtn{
+    width: auto;
+    height: 40px;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-size: 15px;
+    color: var(--energyWhite);
+    background-color: #d60b13;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.pageWrapper .form .signUpBtnDisabled{
+    width: auto;
+    height: 40px;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-size: 15px;
+    color: var(--energyWhite);
+    background-color: #d16f72;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+/* styles for Registration voucher ends here */
+
+.pageWrapper .result{
+    width: 90vw;
+    height: 65vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    margin-top: 50px;
+    gap: 30px;
+    border: solid 2px grey;
+    padding: 20px 20px;
+}
+
+.pageWrapper .result .left{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    background-color: var(--energyBlue);
+    border-radius: 5px;
+}
+
+.pageWrapper .result .left img{
+    width: 70%;
+    height: 70%;
+}
+
+
+.pageWrapper .result .right{
+    width: 40%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 20px;
+    background-color: var(--energyWhite);
+    border-radius: 5px;
+    padding-left: 20px;
+}
+
+.pageWrapper .result .right .name{
+    width: auto;
+    height: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 0 20px;
+    font-size: 15px;
+    color: white;
+    background-color: var(--energyBlue);
+}
+
+.pageWrapper .result .right p{
+    font-size: 15px;
+    color: var(--energyBlack);
+    font-weight: 700;
+}
+
+.guidelines{
+    width: 70vw;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: flex-start;
+    margin-top: 30px;
+    padding-bottom: 50px;
+}
+
+.guidelines .task{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+}
+
+.guidelines .task h2{
+    color: var(--energyBlack);
+}
+
+.guidelines .task p{
+    color: var(--energyBlack);
+    font-size: 15px;
+}
+
+.guidelines ul, .guidelines ol{
+    width: 95%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+    font-size: 15px;
+    padding-left: 15px;
+}
+
+
+.guidelines .taskBtn{
+    color: var(--energyWhite);
+    font-size: 15px;
+    width: auto;
+    background-color: var(--energyBlack);
+    height: 40px;
+    padding: 10px 20px;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+
+@media (max-width: 500px){
+
+    .wrapper-bg{
+        width: 100vw;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background: url(./../../assets//images/bg.jpg);
+        justify-content: flex-start;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-color: var(--energyWhite);
+    }
+    
+    .pageWrapper{
+        width: 100vw;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: var(--energyWhite);
+    }
+    
+    .pageWrapper .header{
+        width: 100vw;
+        height: 50px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--energyWhite);
+        padding: 10px 0;
+    }
+    
+    .pageWrapper .header img{
+        width: 140px;
+        height: 50px;
+    }
+
+    .pageWrapper .anotherCert{
+        position: absolute;
+        font-size: 27px;
+        color: var(--energyBlack);
+        left: 20px;
+        top: -30px;
+        cursor: pointer;
+    }
+    
+    .pageWrapper .landing{
+        width: 90vw;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background: transparent;
+        margin-top: 20px;
+        gap: 20px;
+    }
+
+    .pageWrapper .nextLanding{
+        width: 90vw;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background: transparent;
+        margin-top: 20px;
+        gap: 20px;
+    }
+    
+    .pageWrapper .landing .left{
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+    }
+    
+    .pageWrapper .landing .left h1{
+        color: var(--energyWhite);
+        text-align: center;
+        font-weight: 400;
+        font-size: 25px;
+        width: 100%;
+    }
+    
+    .pageWrapper .landing .left h1 span{
+        color: var(--energyWhite);
+        font-weight: 700;
+        font-size: 25px;
+    }
+    
+    .pageWrapper .landing .left p{
+        width: 90%;
+        color: var(--energyWhite);
+        font-size: 15px;
+        line-height: 1.5;
+        text-align: center;
+    }
+
+    /* styles for Registration voucher starts here */
+.pageWrapper .landing .left .voucherBtn{
+    color: var(--energyWhite);
+    font-size: 15px;
+    width: auto;
+    background-color: var(--challengeBlue);
+    height: 40px;
+    padding: 10px;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+}
+
+
+.pageWrapper .landing .left .winner-verification{
+    width: 90vw;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.pageWrapper .landing .left .winner-verification input{
+    width: 100%;
+    height: 40px;
+    background-color: var(--energyWhite);
+    border-radius: 4px;
+    padding-left: 10px;
+    font-size: 15px;
+    color: var(--energyBlack);
+}
+
+.pageWrapper .landing .left .winner-verification p{
+    width: 100%;
+    height: auto;
+    background-color: var(--energyWhite);
+    font-size: 15px;
+    color: var(--voucherRed);
+    padding: 10px;
+}
+
+/* styles for Registration voucher starts here */
+    
+    .pageWrapper .landing .right{
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        background-color: var(--energyWhite);
+        border-radius: 5px;
+        padding: 20px;
+    }
+    
+    .pageWrapper .landing .right p{
+        width: 80%;
+        color: var(--energyBlack);
+        text-align: center;
+        font-size: 15px;
+    }
+    
+    .pageWrapper .landing .right input{
+        width: 90%;
+        height: 40px;
+        border-radius: 4px;
+        padding-left: 10px;
+        color: var(--energyWhite);
+        background-color: var(--energyBlack);
+        font-size: 15px;
+    }
+    
+    .pageWrapper .landing .right button{
+        width: 90%;
+        height: 40px;
+        border-radius: 4px;
+        padding-left: 10px;
+        color: var(--energyWhite);
+        background-color: var(--btnColor);
+        font-size: 15px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        border: none;
+        cursor: pointer;
+    }
+    
+    .pageWrapper .landing .right button:hover{
+        background-color: rgb(32, 32, 93);
+    }
+
+
+    /* styles for Registration voucher starts here */
+.pageWrapper .landing .right{
+    width: 90%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    background-color: var(--energyWhite);
+    border-radius: 5px;
+}
+
+.pageWrapper .landing .right img{
+    width: 100%;
+    height: 280px;
+}
+
+
+.pageWrapper .form{
+    width: 90vw;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: var(--energyWhite);
+    margin-top: 50px;
+    gap: 20px;
+    padding: 20px;
+    border-radius: 4px;
+}
+
+.pageWrapper .form .tag{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-size: 30px;
+    font-weight: 700;
+    color: #d60b13;
+}
+
+.pageWrapper .form .field{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: var(--energyWhite);
+}
+
+.pageWrapper .form .field label{
+    font-size: 15px;
+    color: var(--energyBlack);
+}
+
+.pageWrapper .form .field input{
+    width: 100%;
+    height: 40px;
+    background-color: transparent;
+    padding-left: 10px;
+    border-radius: 4px;
+    font-size: 15px;
+    color: var(--energyBlack);
+}
+
+.pageWrapper .form .field select{
+    width: 100%;
+    height: 40px;
+    background-color: transparent;
+    padding-left: 10px;
+    border-radius: 4px;
+    font-size: 15px;
+    color: var(--energyBlack);
+}
+
+.pageWrapper .form .field ul{
+    width: auto;
+    height: auto;
+    margin-top: 15px;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.pageWrapper .form .field ul p{
+    font-size: 15px;
+    color: var(--energyBlack);
+    font-weight: 700;
+    position: relative;
+    left: -20px;
+}
+
+.pageWrapper .form .field ul li{
+    font-size: 15px;
+    color: var(--energyBlack);
+}
+
+.pageWrapper .form .field .prices{
+    width: auto;
+    height: auto;
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    font-size: 15px;
+    gap: 10px;
+}
+
+.pageWrapper .form .field .prices .cost{
+    color: var(--energyBlack);
+    font-weight: 700;
+}
+
+.pageWrapper .form .field .prices .renderedCost{
+    width: auto;
+    height: auto;
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    font-size: 15px;
+    gap: 10px;
+}
+
+.pageWrapper .form .field .prices .oldPrice{
+    text-decoration: line-through;
+    color: gray;
+}
+
+.pageWrapper .form .signUpBtn{
+    width: auto;
+    height: 40px;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-size: 15px;
+    color: var(--energyWhite);
+    background-color: #d60b13;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+/* styles for Registration voucher ends here */
+    
+    .pageWrapper .result{
+        width: 90vw;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background: transparent;
+        margin-top: 50px;
+        gap: 30px;
+        border: solid 2px grey;
+        padding: 20px 20px;
+    }
+    
+    .pageWrapper .result .left{
+        width: 100%;
+        height: 250px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 30px;
+        background-color: var(--energyBlue);
+        border-radius: 5px;
+    }
+    
+    .pageWrapper .result .left img{
+        width: 90%;
+        height: 90%;
+    }
+    
+    
+    .pageWrapper .result .right{
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        background-color: var(--energyWhite);
+        border-radius: 5px;
+        padding-left: 0;
+    }
+    
+    .pageWrapper .result .right .name{
+        width: auto;
+        height: 40px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        padding: 0 20px;
+        font-size: 15px;
+        color: white;
+        background-color: var(--energyBlue);
+    }
+    
+    .pageWrapper .result .right p{
+        font-size: 15px;
+        color: var(--energyBlack);
+        font-weight: 700;
+    }
+
+
+
+
+    .guidelines{
+        width: 90vw;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        align-items: flex-start;
+        margin-top: 30px;
+    }
+    
+    .guidelines .task{
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        align-items: flex-start;
+    }
+    
+    .guidelines .task h2{
+        color: var(--energyBlack);
+    }
+    
+    .guidelines .task p{
+        color: var(--energyBlack);
+        font-size: 15px;
+    }
+    
+    .guidelines ul, .guidelines ol{
+        width: 95%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        align-items: flex-start;
+        font-size: 15px;
+        padding-left: 15px;
+    }
+    
+    
+    .guidelines .taskBtn{
+        color: var(--energyWhite);
+        font-size: 15px;
+        width: auto;
+        background-color: var(--energyBlack);
+        height: 40px;
+        padding: 10px 20px;
+        border-radius: 4px;
+        border: none;
+        cursor: pointer;
+        text-decoration: none;
+    }
+}

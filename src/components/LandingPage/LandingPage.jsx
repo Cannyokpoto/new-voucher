@@ -269,9 +269,6 @@ function FirstLandingPage() {
           : "pageWrapper"
       }
     >
-      <header className="header">
-        <img src={PHOTOS.LOGO} alt="" />
-      </header>
 
       {student !== null && screen === "result" ? (
         <GoArrowLeft className="anotherCert" onClick={goBack} />
@@ -280,8 +277,8 @@ function FirstLandingPage() {
       )}
 
       {screen === "landing" && student == null ? (
-        <div className="landing">
-          <div className="right">
+        <div className="relative landing">
+          <div className="border right">
             {/* <p>You can search to verify  bearer's certificate by certificate number:</p>
 
                 <input type="number" placeholder='Enter certificate number' onChange={certNumHandler}/>
@@ -289,6 +286,13 @@ function FirstLandingPage() {
                 <p className='certError'>{certificateError}</p>
 
                 <button onClick={viewCertificate}>Search</button> */}
+                
+                <Link
+                  to="/choice"
+                  className="absolute text-white left-3 text-30px bottom-40"
+                  >
+                  <GoArrowLeft />
+                </Link>
 
             <img src={PHOTOS.discount} alt="" />
           </div>
@@ -361,7 +365,7 @@ function FirstLandingPage() {
       </div> : ""}
 
       {screen === "taskForm" ? (
-        <div className="form">
+        <div className="border border-black form">
           <GoArrowLeft className="anotherCert" onClick={goBack} />
           <span className="tag">Start task</span>
 
@@ -799,9 +803,6 @@ function SecondLandingPage() {
           : "pageWrapper"
       }
     >
-      <header className="header">
-        <img src={PHOTOS.LOGO} alt="" />
-      </header>
 
       {participant !== null && screen === "result" ? (
         <GoArrowLeft className="anotherCert" onClick={goBack} />
