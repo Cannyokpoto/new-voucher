@@ -244,7 +244,7 @@ function Twenty() {
   
     return (
       <div
-        className="h-auto border border-black pageWrapper w-60vw"
+        className="h-auto pageWrapper w-60vw"
       >
 
   
@@ -254,63 +254,11 @@ function Twenty() {
           ""
         )}
   
-        {screen === "landing" && participant == null ? (
-          <div className="landing nextLanding">
-            {/* <div className="right">
-              <p>You can search to verify  bearer's certificate by certificate number:</p>
+        
+         
+       
   
-                  <input type="number" placeholder='Enter certificate number' onChange={certNumHandler}/>
-                  
-                  <p className='certError'>{certificateError}</p>
-  
-                  <button onClick={viewCertificate}>Search</button>
-  
-              <img src={PHOTOS.discount} alt="" />
-            </div> */}
-  
-              
-            <div className="left">
-              {/* <Countdown /> */}
-              <h1>
-                Claim your voucher!
-              </h1>
-  
-              <p>
-                Provide your voucher number to enjoy 40% discount on all our courses.
-              </p>
-  
-              <div className="winner-verification">
-                <input type="number" name="voucherNumber" id="voucherNumber" 
-                placeholder="Enter voucher number" 
-                onChange={vouchertNumHandler}
-                />
-                {voucherError ? <p>{voucherError}</p> : ""}
-              </div>
-  
-              <button className="voucherBtn" onClick={viewParticipant}>Claim voucher</button>
-            </div>
-  
-            {/* { loading ? <Loading /> : "" } */}
-          </div>
-        ) : (
-          ""
-        )}
-  
-        {/* {student !==null && screen === 'result' ?
-        <div className="result">
-          
-          <div className="left">
-              <img src={`https://server.handiwork.com.ng/${student.certificate_file_path}`} alt="" />
-          </div>
-  
-          <div className="right">
-              <div className="name">{student.student_name}</div>
-              
-              <p>Course: {student.course}</p>
-              <p>Cert No: {student.certificate_number}</p>
-              <p>Issued Date: {`${IssuedOn[2]}/${IssuedOn[1]}/${IssuedOn[0]}`}</p>
-          </div>
-        </div> : ""} */}
+        
   
         {screen === "winner" ? (
           <div className="border form">

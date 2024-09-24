@@ -75,8 +75,7 @@ function Independence() {
   
         <div className="flex flex-col items-start w-40 h-auto gap-2 pt-3 pb-3 indep-text">
           <h1 className="text-black text-30px">
-            Grab <span className="font-bold">20% OFF</span>
-            Instantly
+            Grab <span className="font-bold">20% OFF</span> Instantly
           </h1>
   
           <p className="text-center text-black text-15px">
