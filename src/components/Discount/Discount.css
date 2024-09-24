@@ -1,0 +1,15 @@
+/* choice styles */
+@media (max-width: 500px){
+    .discount{
+        border: dashed;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 100vh;
+        width: 900vw;
+        gap: 20px;
+        padding: 30px 20px;
+    }
+
+    
+}
