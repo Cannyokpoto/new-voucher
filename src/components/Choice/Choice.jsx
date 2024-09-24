@@ -73,7 +73,7 @@ function Independence() {
             <img src={PHOTOS.independence} alt=""  className="large:h-430px w-90 small:w-100"/>
         </div>
   
-        <div className="flex flex-col w-40 h-auto gap-2 pt-3 small:w-100 small:items-center small:pb-3">
+        <div className="flex flex-col h-auto gap-2 pt-3 large:w-40 small:w-100 small:items-center small:pb-3 indep-text">
           <h1 className="text-black text-30px">
             Grab <span className="font-bold">20% OFF</span>
             Instantly

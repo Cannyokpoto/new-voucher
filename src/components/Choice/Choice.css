@@ -69,4 +69,12 @@
     .independence .indep-image img{
         height: 300px;
     }
+
+    .independence .indep-text{
+        width: 100%;
+        border: dashed;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 }
