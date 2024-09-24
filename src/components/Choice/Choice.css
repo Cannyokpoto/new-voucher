@@ -54,7 +54,6 @@
         width: 90vw;
         gap: 20px;
         padding: 30px 20px;
-        border: dashed;
     }
 
     .independence .indep-image{
@@ -63,7 +62,6 @@
         align-items: start;
         height: auto;
         width: 100%;
-        border: dashed;
     }
 
     .independence .indep-image img{
@@ -72,9 +70,13 @@
 
     .independence .indep-text{
         width: 100%;
-        border: dashed;
         display: flex;
         flex-direction: column;
         align-items: center;
+    }
+
+    .independence .indep-text h1,  .independence .indep-text p{
+        width: 100%;
+        text-align: center;
     }
 }
