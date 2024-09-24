@@ -244,16 +244,18 @@ function FirstLandingPage() {
           }
         );
 
+        console.log('new error:', response)
+
         if (response.status === 201) {
           setParticipant(response.data.promotionDetails);
           alert("Registration for #MyTechDreamWithPageInnovations completed. Good luck!");
           setScreen('landing')
-        } else {
-          alert("An unexpected error occured, please refill form.");
-        }
+        } 
       } catch (error) {
         console.log("registration error:", error.response.data.error);
-        alert("An unexpected error occured, please refill form.");
+        if(error.response.data.error.includes('Duplicate')) {
+          alert("Email already registered for this challenge, please use a different email.");
+        }
       }
       finally{
         setLoading(false);
