@@ -62,24 +62,24 @@ function Choice() {
 
 function Independence() {
     return (
-      <div className="flex items-start justify-center pt-3 border h-100vh w-100vw independence">
-        <div className="flex flex-col justify-center h-auto gap-1 w-30 rounded-10">
+      <div className="flex items-start justify-center pt-3 border h-100vh w-100vw independence small:flex small:flex-col small:w-90vw small:h-auto small:items-center">
+        <div className="flex flex-col justify-center h-auto gap-1 w-30 rounded-10 small:w-100">
             <Link
             to="/choice"
             className="text-black text-30px"
             >
             <GoArrowLeft className="anotherCert" />
             </Link>
-            <img src={PHOTOS.independence} alt=""  className="h-430px w-90"/>
+            <img src={PHOTOS.independence} alt=""  className="h-430px w-90 small:w-100"/>
         </div>
   
-        <div className="flex flex-col w-40 h-auto gap-2 pt-3">
+        <div className="flex flex-col w-40 h-auto gap-2 pt-3 small:w-100 small:items-center small:pb-3">
           <h1 className="text-black text-30px">
             Grab <span className="font-bold">20% OFF</span>
             Instantly
           </h1>
   
-          <p className="text-black text-15px">
+          <p className="text-black text-15px small:text-center">
           Would you like to learn any of our in demand courses? We’re offering you an instant 20% discount without any tasks or extra steps. Just sign up, save, and start learning right away!
           </p>
   
@@ -90,7 +90,7 @@ function Independence() {
             Claim 20% discount
           </Link>
   
-          <div className="flex flex-col w-auto h-auto gap-1">
+          <div className="flex flex-col w-auto h-auto gap-1 small:items-center">
             <p className="text-black text-15px">
             For more Information
             </p>
