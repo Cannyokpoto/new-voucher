@@ -62,7 +62,7 @@ function Choice() {
 
 function Independence() {
     return (
-      <div className="flex items-center justify-center pt-3 border h-100vh independence w-90vw">
+      <div className="flex items-center justify-center pt-3 border large:h-100vh independence large:w-90vw">
         <div className="flex flex-col justify-center h-auto gap-1 w-30 rounded-10 indep-image">
             <Link
             to="/choice"
@@ -70,7 +70,7 @@ function Independence() {
             >
             <GoArrowLeft className="anotherCert" />
             </Link>
-            <img src={PHOTOS.independence} alt=""  className=" h-430px w-90 w-100"/>
+            <img src={PHOTOS.independence} alt=""  className=" h-430px w-100"/>
         </div>
   
         <div className="flex flex-col items-start w-40 h-auto gap-2 pt-3 pb-3 indep-text">
