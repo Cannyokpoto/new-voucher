@@ -62,7 +62,7 @@ function Choice() {
 
 function Independence() {
     return (
-      <div className="flex items-center justify-center pt-3 border large:h-100vh independence large:w-90vw">
+      <div className="flex items-center justify-center pt-3 border large:h-100vh independence large:w-90vw large:gap-5">
         <div className="flex flex-col justify-center h-auto gap-1 w-30 rounded-10 indep-image">
             <Link
             to="/choice"

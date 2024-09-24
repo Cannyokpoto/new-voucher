@@ -27,6 +27,7 @@
     .choice .vid{
         width: 100%;
         height: auto;
+        background-color: grey;
     }
 
     .choice .vid iframe{
