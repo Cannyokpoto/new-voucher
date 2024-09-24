@@ -42,3 +42,36 @@
         gap: 20px;
     }
 }
+
+
+/* independence styles */
+@media (max-width: 500px){
+    .independence{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+        width: 90vw;
+        gap: 20px;
+        padding: 30px 20px;
+        border: dashed;
+    }
+
+    .choice .vid{
+        width: 100%;
+        height: auto;
+    }
+
+    .choice .vid iframe{
+        width: 100%;
+        height: 230px;
+    }
+
+    .choice .txt{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+        gap: 20px;
+    }
+}

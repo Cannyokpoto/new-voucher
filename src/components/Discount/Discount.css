@@ -1,7 +1,6 @@
 /* choice styles */
 @media (max-width: 500px){
     .discount{
-        border: dashed red;
         display: flex;
         flex-direction: column;
         align-items: center;
