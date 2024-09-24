@@ -8,12 +8,12 @@ import { GoArrowLeft } from "react-icons/go";
 
 function Choice() {
   return (
-    <div className="flex items-start justify-around pt-5 border h-100vh w-100vw choice">
-      <div className="w-40 h-auto rounded-10">
+    <div className="lg:flex-row lg:border lg:pt-5 lg:gap-3 lg:justify-around lg:items-start lg:flex lg:h-100vh lg:w-100vw choice small:flex small:flex-col small:w-90vw small:items-center small:h-auto small:gap-3">
+      <div className="h-auto lg:w-40 lg:rounded-10 small:w-100">
         <iframe
           //   width="100%"
           //   height="315"
-          className="h-315px w-100 rounded-20"
+          className="lg:h-315px lg:w-100 rounded-20 small:h-200px small:w-100"
         //   src="https://www.youtube.com/embed/lFC9stI0J6s?si=0axOF9Uzi1fDxZrP"
         src="https://www.youtube.com/embed/3MGJtRxPmfc?si=DmeDD9AXZ2VIHNkI"
           title="YouTube video player"
@@ -24,8 +24,8 @@ function Choice() {
         ></iframe>
       </div>
 
-      <div className="flex flex-col h-auto gap-2 w-50">
-        <h1 className="text-30px text-vogueWhite">
+      <div className="lg:gap-2 lg:h-auto lg:flex-col lg:flex lg:w-50 small:w-100 small:px-1 small:h-auto small:gap-3 small:flex small:flex-col small:pb-3">
+        <h1 className="lg:text-30px text-vogueWhite small:text-15px">
           Unlock <span className="font-bold">40% OFF</span> by Completing a Task
           or Grab <span className="font-bold">20% OFF</span> Instantly
         </h1>
