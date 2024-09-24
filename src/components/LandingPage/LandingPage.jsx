@@ -254,7 +254,8 @@ function FirstLandingPage() {
       } catch (error) {
         console.log("registration error:", error.response.data.error);
         if(error.response.data.error.includes('Duplicate')) {
-          alert("Email already registered for this challenge, please use a different email.");
+          // alert("Email already registered for this challenge, please use a different email.");
+          validationErrors.email = "Email already registered for this challenge, please use a different email.";
         }
       }
       finally{
