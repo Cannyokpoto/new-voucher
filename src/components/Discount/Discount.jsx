@@ -17,6 +17,8 @@ function Discount() {
             className="flex items-center justify-center bg-vogueBlack h-40px w-200px text-vogueWhite rounded-5 hover:bg-transparent hover:border hover:text-vogueBlack hover:border-vogueBlack text-15px"
         >VIRTUAL</Link>
       </div>
+
+      <p className="text-15px"><span className="font-bold">Location:</span> 167 Iju Road, Beside Providence Schools, Fagba, Lagos, Nigeria.</p>
     </div>
   );
 }
