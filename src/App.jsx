@@ -23,7 +23,7 @@ function App() {
       <Header />
       <a
         href="https://wa.me/2348029425815"
-        className="fixed flex items-center justify-center w-auto h-auto p-1 text-white rounded-full large:right-8 bg-discountGreen hover:bg-white hover:border hover:text-discountGreen hover:border-discountGreen large:bottom-5 small:bottom-13 small:right-5"
+        className="fixed flex items-center justify-center w-auto h-auto p-1 text-white rounded-full large:right-8 bg-discountGreen hover:bg-white hover:border hover:text-discountGreen hover:border-discountGreen large:bottom-5 small:bottom-8 small:right-5"
       >
         <FaWhatsapp className="large:text-30px small:text-25px" />
       </a>
