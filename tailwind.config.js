@@ -192,7 +192,7 @@ export default {
 
       screens: {
         'large': '1024px',
-        'small': '375px',
+        'small': '300px',
       }
     },
   },
