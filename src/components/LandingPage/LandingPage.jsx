@@ -176,8 +176,11 @@ function FirstLandingPage() {
     phoneNumber: phoneNumber,
     preferredCourse: preferredCourse,
     instagramUrl: instagramUrl,
-    instagramHandle: instagramHandle
+    instagramHandle: instagramHandle,
+    preferredCourse: preferredCourse,
   };
+
+  console.log("formData:", formData);
 
   //funtion for form submit
   const handleSubmit = async () => {
@@ -200,9 +203,9 @@ function FirstLandingPage() {
       validationErrors.phoneNumber = "phone number is required";
     }
 
-    // if (!preferredCourse.trim()) {
-    //   validationErrors.preferredCourse = "please select a course";
-    // }
+    if (!preferredCourse.trim()) {
+      validationErrors.preferredCourse = "please select a course";
+    }
 
     if (!instagramHandle.trim()) {
       validationErrors.instagramHandle = "please provide your instagram handle";
@@ -252,7 +255,7 @@ function FirstLandingPage() {
           setScreen('landing')
         } 
       } catch (error) {
-        console.log("registration error:", error.response.data.error);
+        console.log("registration error:", error);
         if(error.response.data.error.includes('Duplicate')) {
           // alert("Email already registered for this challenge, please use a different email.");
           validationErrors.email = "Email already registered for this challenge, please use a different email.";
@@ -379,6 +382,7 @@ function FirstLandingPage() {
               name="firstName"
               placeholder="Enter first name"
               onChange={(e) => setFirstName(e.target.value)}
+              className="border"
             />
             {errors.firstName && (
               <span className="voucherError">{errors.firstName}</span>
@@ -392,6 +396,7 @@ function FirstLandingPage() {
               name="lastName"
               placeholder="Enter last name"
               onChange={(e) => setLastName(e.target.value)}
+              className="border"
             />
             {errors.lastName && (
               <span className="voucherError">{errors.lastName}</span>
@@ -405,6 +410,7 @@ function FirstLandingPage() {
               name="email"
               placeholder="Enter your email"
               onChange={(e) => setEmail(e.target.value)}
+              className="border"
             />
             {errors.email && (
               <span className="voucherError">{errors.email}</span>
@@ -418,10 +424,73 @@ function FirstLandingPage() {
               name="phoneNumber"
               placeholder="Enter phone number"
               onChange={(e) => setPhoneNumber(e.target.value)}
+              className="border"
             />
             {errors.phoneNumber && (
               <span className="voucherError">{errors.phoneNumber}</span>
             )}
+          </div>
+
+          <div className="field">
+            <label htmlFor="preferredCourse">Preferred course</label>
+            <select
+              name="preferredCourse"
+              id="preferredCourse"
+              onChange={handleCourses}
+              className="border"
+            >
+              <option value="">--Preferred course--</option>
+              {sortedCourses &&
+                sortedCourses.map((course, i) => (
+                  <option value={course.name} key={i}>
+                    {course.name}
+                  </option>
+                ))}
+            </select>
+            {errors.preferredCourse && (
+              <span className="voucherError">{errors.preferredCourse}</span>
+            )}
+
+            <ul>
+              {preferredCourse !== "" ? <p>Overview:</p> : ""}
+              {courses &&
+                courses.map(
+                  (course, i) =>
+                    course.name === preferredCourse && (
+                      <li key={i}>{course.overview}</li>
+                    )
+                )}
+            </ul>
+
+            <div className="prices">
+              {preferredCourse !== "" ? (
+                <p className="cost">Cost (40% discount):</p>
+              ) : (
+                ""
+              )}
+
+              {/* {preferredCourse !== "" ? (
+                <p className="warning">
+                  Note: Voucher expires at midnight, 16th september 2024.
+                  Discount will be withdrawn after this period.
+                </p>
+              ) : (
+                ""
+              )} */}
+
+              {courses &&
+                courses.map(
+                  (course, i) =>
+                    course.name === preferredCourse && (
+                      <div className="renderedCost">
+                        <p className="oldPrice">&#8358;{course.price}</p>
+                        <p className="newPrice">
+                          &#8358;{course.price - (40 / 100) * course.price}.00
+                        </p>
+                      </div>
+                    )
+                )}
+            </div>
           </div>
 
           <div className="field">
@@ -431,7 +500,7 @@ function FirstLandingPage() {
               name="instagramHandle"
               placeholder="E.g @blessing_okon"
               onChange={(e) => setInstagramHandle(e.target.value)}
-              // value="30456"
+              className="border"
             />
             {errors.instagramHandle && (
               <span className="voucherError">{errors.instagramHandle}</span>
@@ -445,7 +514,7 @@ function FirstLandingPage() {
               name="instagramHandle"
               placeholder="E.g https://instagram.com/..."
               onChange={(e) => setInstagramUrl(e.target.value)}
-              // value="30456"
+              className="border"
             />
             {errors.instagramUrl && (
               <span className="voucherError">{errors.instagramUrl}</span>
@@ -519,10 +588,11 @@ function FirstLandingPage() {
             lastName !== "" &&
             email !== "" &&
             phoneNumber !== "" &&
-            instagramHandle !== "" &&
-            instagramHandle.includes('@') &&
+            preferredCourse !== "" &&
             instagramUrl !== "" &&
-            instagramUrl.includes('https')) ||
+            instagramUrl.includes('https') &&
+            instagramHandle !== "" &&
+            instagramHandle.includes('@')) ||
           !errors ? (
             ""
           ) : (
@@ -537,6 +607,7 @@ function FirstLandingPage() {
             lastName !== "" &&
             email !== "" &&
             phoneNumber !== "" &&
+            preferredCourse !== "" &&
             instagramHandle !== "" &&
             instagramHandle.includes('@') &&
             instagramUrl !== "" &&
@@ -734,7 +805,10 @@ function SecondLandingPage() {
     voucherNumber: voucherNumber,
   };
 
+
   console.log("formData:", formData);
+
+  
 
   //funtion for form submit
   const handleSubmit = async () => {
