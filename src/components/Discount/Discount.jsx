@@ -18,7 +18,7 @@ function Discount() {
         >VIRTUAL</Link>
       </div>
 
-      <p className="text-15px"><span className="font-bold">Location:</span> 167 Iju Road, Beside Providence Schools, Fagba, Lagos, Nigeria.</p>
+      <p className="large:text-15px small:text-13px small:mt-2"><span className="font-bold">Location:</span> 167 Iju Road, Beside Providence Schools, Fagba, Lagos, Nigeria.</p>
     </div>
   );
 }
