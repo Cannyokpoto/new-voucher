@@ -6,7 +6,7 @@ import './Discount.css';
 function Discount() {
   return (
     <div className="flex flex-col items-center h-auto gap-3 mt-2 large:w-60vw small:w-90vw discount">
-      <img src={PHOTOS.discount_avatar} alt="" className="w-350px h-300px" />
+      <img src={PHOTOS.discount_avatar} alt="" className="w-350px h-280px" />
       <h4 className="font-bold">Preferred Learning Mode</h4>
 
       <div className="flex items-center justify-center h-auto gap-3 w-100">
