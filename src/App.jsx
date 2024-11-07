@@ -29,12 +29,13 @@ function App() {
       </a>
       <Router>
         <Routes>
-          <Route path="/" element={<Discount />} />
-          <Route path="/challenge" element={<FirstLandingPage />} />
+          {/* <Route path="/" element={<Discount />} /> */}
+          <Route path="/" element={<Independence />} />
+          {/* <Route path="/challenge" element={<FirstLandingPage />} /> */}
 
-          <Route path="/course-registration" element={<SecondLandingPage />} />
-          <Route path="/choice" element={<Choice />} />
-          <Route path="/independence" element={<Independence />} />
+          {/* <Route path="/course-registration" element={<SecondLandingPage />} /> */}
+          {/* <Route path="/choice" element={<Choice />} /> */}
+          {/* <Route path="/independence" element={<Independence />} /> */}
           <Route path="/twenty" element={<Twenty />} />
         </Routes>
       </Router>

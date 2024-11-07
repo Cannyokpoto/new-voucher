@@ -136,6 +136,7 @@ export default {
         paleYellow: '#A49C5A',
         discountGreen: '#1FAF38',
         discountBlue: '#0057FF',
+        secondBlue: '#286dd6',
         overlay: 'rgb(23, 23, 23, 0.7)'
       },
 

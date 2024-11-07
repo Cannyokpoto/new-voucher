@@ -64,12 +64,12 @@ function Independence() {
     return (
       <div className="flex items-center justify-center pt-3 border large:h-100vh independence large:w-90vw large:gap-5">
         <div className="flex flex-col justify-center h-auto gap-1 w-30 rounded-10 indep-image">
-            <Link
+            {/* <Link
             to="/choice"
             className="text-black text-30px"
             >
             <GoArrowLeft className="anotherCert" />
-            </Link>
+            </Link> */}
             <img src={PHOTOS.independence} alt=""  className=" h-430px w-100"/>
         </div>
   
@@ -78,18 +78,18 @@ function Independence() {
             Grab <span className="font-bold">20% OFF</span> Instantly
           </h1>
   
-          <p className="text-center text-black text-15px">
+          <p className="text-black small:text-center text-15px large:text-left">
           Would you like to learn any of our in demand courses? We’re offering you an instant 20% discount without any tasks or extra steps. Just sign up, save, and start learning right away!
           </p>
   
           <Link
             to="/twenty"
-            className="flex items-center justify-center text-black bg-vogueYello h-40px w-200px rounded-5 hover:bg-white hover:border hover:text-vogueBlack hover:border-vogueBlack text-15px"
+            className="flex items-center justify-center bg-secondBlue h-40px w-200px rounded-5 hover:bg-white hover:border hover:text-vogueBlack hover:border-vogueBlack text-15px text-vogueWhite"
           >
             Claim 20% discount
           </Link>
   
-          <div className="flex flex-col items-center w-auto h-auto gap-1">
+          {/* <div className="flex flex-col items-center w-auto h-auto gap-1">
             <p className="text-black text-15px">
             For more Information
             </p>
@@ -101,7 +101,7 @@ function Independence() {
                 <FaWhatsapp className="text-20px"/>
                 Whatsapp
             </a>
-          </div>
+          </div> */}
         </div>
       </div>
     );
