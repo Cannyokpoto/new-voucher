@@ -79,7 +79,13 @@ function Independence() {
           </h1>
   
           <p className="text-black small:text-center text-15px large:text-left">
-          Would you like to learn any of our in demand courses? We’re offering you an instant 20% discount without any tasks or extra steps. Just sign up, save, and start learning right away!
+          Gain in-demand skills in Cybersecurity, Data Analysis, UI/UX Design, and more with our expert-led courses.
+          
+          </p>
+
+          <p className="text-black small:text-center text-15px large:text-left">
+          Enjoy hands-on learning, flexible study options, and certifications that employers value.
+          Offer ends soon—register today!
           </p>
   
           <Link
